@@ -152,7 +152,7 @@ footer p{max-width:none;margin:0 0 6px}
 .cert ol{margin:0;padding:0;list-style:none;counter-reset:k}
 .cert ol li{counter-increment:k;position:relative;padding:9px 0 9px 40px;border-top:1px solid var(--line);color:#cfdae3}
 .cert ol li::before{content:counter(k);position:absolute;left:0;top:11px;width:26px;height:26px;border-radius:50%;border:2px solid var(--a);color:var(--a);display:grid;place-items:center;font:700 12px "Familjen Grotesk",sans-serif;box-shadow:0 0 14px rgba(79,224,193,.4)}
-.cert .btn{margin-top:22px}
+
 
 /* featured project cards */
 .pcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:20px}
@@ -214,6 +214,20 @@ footer p{max-width:none;margin:0 0 6px}
 .roles{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:26px}
 .roles li{padding:20px 22px 20px 54px;position:relative}
 .roles li::before{content:"";position:absolute;left:24px;top:28px;width:14px;height:8px;border-left:2.5px solid var(--a);border-bottom:2.5px solid var(--a);transform:rotate(-45deg);filter:drop-shadow(0 0 6px var(--a))}
+
+
+/* links + screenshots */
+.btn.sm{padding:10px 20px;font-size:15px}
+.linkrow{display:flex;flex-wrap:wrap;gap:12px;margin:-6px 0 26px}
+.linkrow .btn.ghost{margin:0}
+.cert .linkrow{margin:22px 0 0}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:18px}
+.shot{margin:0;min-width:0}
+.shots>*{min-width:0}
+.shot a{display:block;overflow-x:auto;border-radius:14px;border:1px solid var(--line);background:#fff;padding:6px;transition:box-shadow .4s,border-color .4s}
+.shot a:hover{border-color:rgba(79,224,193,.5);box-shadow:0 18px 44px -20px rgba(79,224,193,.5)}
+.shot img{display:block;width:100%;height:auto;min-width:var(--mw,0);border-radius:8px}
+.shot figcaption{font-size:14px;color:var(--muted);margin-top:10px}
 
 @media (max-width:900px){.hero .wrap{grid-template-columns:1fr;gap:34px}}
 @media (max-width:820px){.offer{grid-template-columns:1fr}.cert{grid-template-columns:1fr}.cs-info{grid-template-columns:1fr}.charts{grid-template-columns:1fr}}
@@ -298,7 +312,7 @@ footer p{max-width:none;margin:0 0 6px}
         <div><dt>Expires on</dt><dd>October 29, 2028</dd></div>
         <div><dt>Certificate ID</dt><dd>57183 198679933</dd></div>
       </dl>
-      <a class="btn" href="https://skillshop.credential.net/1f07b61d-d468-4152-9c92-c2af4deaefd1" target="_blank" rel="noopener">Verify credential</a>
+      <div class="linkrow"><a class="btn" href="https://skillshop.credential.net/1f07b61d-d468-4152-9c92-c2af4deaefd1" target="_blank" rel="noopener">Verify credential</a><a class="btn ghost" href="pdfs/google-ad-manager-certificate.pdf" download="Hamid-Ali-Google-Ad-Manager-Certificate.pdf">Download certificate PDF</a></div>
     </div>
     <div>
       <h4>What the learning path covers</h4>
@@ -328,10 +342,11 @@ footer p{max-width:none;margin:0 0 6px}
 
 <section id="cases"><div class="wrap">
   <h2 class="rv">Project case studies</h2>
-  <p class="muted rv" style="--i:1">Previews below are rebuilt from my original sample files. All data is simulated for learning purposes.</p>
+  <p class="muted rv" style="--i:1">Each case study has a preview rebuilt from my original sample files, a screenshot of the spreadsheet, and links to the Google Sheet and PDF. All data is simulated for learning purposes.</p>
 
   <article class="card case rv" id="p1">
     <header><div><span class="no">PROJECT 01</span><h3>Campaign Performance Report</h3></div><span class="badge">Simulated learning project</span></header>
+    <div class="linkrow"><a class="btn sm" href="https://docs.google.com/spreadsheets/d/100QVj7LuuwTW_iHor4sJB4DjIJJLi8NaADQAzjvKaLw/edit?usp=sharing" target="_blank" rel="noopener">Open Google Sheet</a><a class="btn sm ghost" href="pdfs/project-1-campaign-performance-report.pdf" target="_blank" rel="noopener">View PDF</a></div>
     <div class="cs-info">
       <div><h4>Objective</h4><p>Report impressions, clicks and CTR for each campaign, with overall totals.</p></div>
       <div><h4>Tools used</h4><p>Google Sheets</p></div>
@@ -350,10 +365,14 @@ footer p{max-width:none;margin:0 0 6px}
         <tr><td>XYZ Electronics</td><td>80,000</td><td>1,200</td><td>1.50%</td><td>01-Nov-2026</td></tr>
       </tbody>
       <tfoot><tr><td>Total</td><td>230,000</td><td>4,950</td><td>2.15%</td><td></td></tr></tfoot></table></div>
+  
+    <p class="prev" style="margin-top:28px">Spreadsheet screenshot</p>
+    <div class="shots" style="grid-template-columns:minmax(0,1fr)"><figure class="shot"><a href="images/p1-campaign-performance-report.png" target="_blank" rel="noopener" style="--mw:560px"><img src="images/p1-campaign-performance-report.png" alt="Screenshot of the Campaign Performance Report spreadsheet showing three campaigns and totals" loading="lazy"></a></figure></div>
   </article>
 
   <article class="card case rv" id="p2">
     <header><div><span class="no">PROJECT 02</span><h3>Sample Campaign Setup</h3></div><span class="badge">Simulated learning project</span></header>
+    <div class="linkrow"><a class="btn sm" href="https://docs.google.com/spreadsheets/d/1tL3nSRFDgWavTa5PbfH9l9oOMbTHXAiz7uVK9n8TjU8/edit?usp=sharing" target="_blank" rel="noopener">Open Google Sheet</a><a class="btn sm ghost" href="pdfs/project-2a-campaign-information.pdf" target="_blank" rel="noopener">Campaign information PDF</a><a class="btn sm ghost" href="pdfs/project-2b-line-item-details.pdf" target="_blank" rel="noopener">Line item PDF</a><a class="btn sm ghost" href="pdfs/project-2c-creative-details.pdf" target="_blank" rel="noopener">Creative PDF</a><a class="btn sm ghost" href="pdfs/project-2d-performance-report.pdf" target="_blank" rel="noopener">Performance PDF</a></div>
     <div class="cs-info">
       <div><h4>Objective</h4><p>Document how a campaign is set up in Google Ad Manager, from advertiser and order to line item, creative and results.</p></div>
       <div><h4>Tools used</h4><p>Google Sheets</p></div>
@@ -386,10 +405,14 @@ footer p{max-width:none;margin:0 0 6px}
         <div><dt>CTR</dt><dd>2.00%</dd></div><div><dt>Impression goal</dt><dd>100,000</dd></div>
         <div><dt>Remaining</dt><dd>25,000</dd></div><div><dt>Delivery progress</dt><dd>75% delivered</dd></div></dl></article>
     </div>
+  
+    <p class="prev" style="margin-top:28px">Spreadsheet screenshots</p>
+    <div class="shots"><figure class="shot"><a href="images/p2a-campaign-information.png" target="_blank" rel="noopener"><img src="images/p2a-campaign-information.png" alt="Screenshot of the Campaign Information spreadsheet" loading="lazy"></a><figcaption>Campaign information</figcaption></figure><figure class="shot"><a href="images/p2b-line-item-details.png" target="_blank" rel="noopener"><img src="images/p2b-line-item-details.png" alt="Screenshot of the Line Item Details spreadsheet" loading="lazy"></a><figcaption>Line item details</figcaption></figure><figure class="shot"><a href="images/p2c-creative-details.png" target="_blank" rel="noopener"><img src="images/p2c-creative-details.png" alt="Screenshot of the Creative Details spreadsheet" loading="lazy"></a><figcaption>Creative details</figcaption></figure><figure class="shot"><a href="images/p2d-performance-report.png" target="_blank" rel="noopener"><img src="images/p2d-performance-report.png" alt="Screenshot of the Performance Report spreadsheet" loading="lazy"></a><figcaption>Performance report</figcaption></figure></div>
   </article>
 
   <article class="card case rv" id="p3">
     <header><div><span class="no">PROJECT 03</span><h3>Daily Monitoring Report</h3></div><span class="badge">Simulated learning project</span></header>
+    <div class="linkrow"><a class="btn sm" href="https://docs.google.com/spreadsheets/d/1Bkt5sh92_gmnDv_JdBMS4oUbdJOW5EVHV6vMILVubPo/edit?usp=sharing" target="_blank" rel="noopener">Open Google Sheet</a><a class="btn sm ghost" href="pdfs/project-3-daily-monitoring-report.pdf" target="_blank" rel="noopener">View PDF</a></div>
     <div class="cs-info">
       <div><h4>Objective</h4><p>Track daily delivery against daily goals and flag campaigns that are on track or behind.</p></div>
       <div><h4>Tools used</h4><p>Google Sheets</p></div>
@@ -408,10 +431,14 @@ footer p{max-width:none;margin:0 0 6px}
         <tr><td>Fashion Hub</td><td>30,000</td><td>900</td><td>3.00%</td><td>25,000</td><td><span class="tag ok">On Track</span></td></tr>
       </tbody>
       <tfoot><tr><td>Total</td><td>73,000</td><td>1,670</td><td>2.29%</td><td>65,000</td><td>Daily summary</td></tr></tfoot></table></div>
+  
+    <p class="prev" style="margin-top:28px">Spreadsheet screenshot</p>
+    <div class="shots" style="grid-template-columns:minmax(0,1fr)"><figure class="shot"><a href="images/p3-daily-monitoring-report.png" target="_blank" rel="noopener" style="--mw:640px"><img src="images/p3-daily-monitoring-report.png" alt="Screenshot of the Daily Monitoring Report spreadsheet showing delivery against daily goals" loading="lazy"></a></figure></div>
   </article>
 
   <article class="card case rv" id="p4">
     <header><div><span class="no">PROJECT 04</span><h3>Campaign Troubleshooting (Issue Log)</h3></div><span class="badge">Simulated learning project</span></header>
+    <div class="linkrow"><a class="btn sm" href="https://docs.google.com/spreadsheets/d/1csEwUkRDEzF1NhseEhmPpabOqjIPmjhbFSfKx3PkLdk/edit?usp=sharing" target="_blank" rel="noopener">Open Google Sheet</a><a class="btn sm ghost" href="pdfs/project-4-campaign-troubleshooting-issue-log.pdf" target="_blank" rel="noopener">View PDF</a></div>
     <div class="cs-info">
       <div><h4>Objective</h4><p>Practise logging delivery problems and the steps taken to investigate and resolve them.</p></div>
       <div><h4>Tools used</h4><p>Google Sheets</p></div>
@@ -430,10 +457,14 @@ footer p{max-width:none;margin:0 0 6px}
         <tr><td>Fashion Hub</td><td>Low Clicks</td><td>Low User Engagement</td><td>Review Creative and CTR</td><td>Review Creative Performance</td><td><span class="tag mid">Monitoring</span></td><td>Medium</td></tr>
         <tr><td>ABC Fashion</td><td>Ad Not Displaying</td><td>Possible Ad Tag Issue</td><td>Check Ad Tag Implementation</td><td>Verify Ad Tag</td><td><span class="tag warn">Pending</span></td><td>High</td></tr>
       </tbody></table></div>
+  
+    <p class="prev" style="margin-top:28px">Spreadsheet screenshot</p>
+    <div class="shots" style="grid-template-columns:minmax(0,1fr)"><figure class="shot"><a href="images/p4-issue-log.png" target="_blank" rel="noopener" style="--mw:760px"><img src="images/p4-issue-log.png" alt="Screenshot of the Campaign Troubleshooting Issue Log spreadsheet with four logged issues" loading="lazy"></a></figure></div>
   </article>
 
   <article class="card case rv" id="p5">
     <header><div><span class="no">PROJECT 05</span><h3>Monthly Performance Report</h3></div><span class="badge">Simulated learning project</span></header>
+    <div class="linkrow"><a class="btn sm" href="https://docs.google.com/spreadsheets/d/19d7vdrWTVbomDdboKU-4mGIrgNsVBfHg8TKg3sHYJR0/edit?usp=sharing" target="_blank" rel="noopener">Open Google Sheet</a><a class="btn sm ghost" href="pdfs/project-5-monthly-performance-report.pdf" target="_blank" rel="noopener">View PDF</a></div>
     <div class="cs-info">
       <div><h4>Objective</h4><p>Summarise monthly campaign performance against monthly impression goals.</p></div>
       <div><h4>Tools used</h4><p>Google Sheets</p></div>
@@ -452,6 +483,9 @@ footer p{max-width:none;margin:0 0 6px}
         <tr><td>Fashion Hub</td><td>600,000</td><td>18,000</td><td>3.00%</td><td>550,000</td><td><span class="tag ok">Above Goal</span></td></tr>
       </tbody>
       <tfoot><tr><td>Total</td><td>1,450,000</td><td>33,250</td><td>2.29%</td><td>1,400,000</td><td>Monthly summary</td></tr></tfoot></table></div>
+  
+    <p class="prev" style="margin-top:28px">Spreadsheet screenshot</p>
+    <div class="shots" style="grid-template-columns:minmax(0,1fr)"><figure class="shot"><a href="images/p5-monthly-performance-report.png" target="_blank" rel="noopener" style="--mw:640px"><img src="images/p5-monthly-performance-report.png" alt="Screenshot of the Monthly Performance Report spreadsheet showing delivery against monthly goals" loading="lazy"></a></figure></div>
   </article>
 </div></section>
 
